@@ -3,6 +3,11 @@
 """
 Entspricht den Werten des Online-Rechners von
 (1) https://www.sparkasse.de/themen/eigenheim-finanzieren/tilgungsfalle.html
+(2) https://www.verivox.de/baufinanzierung/tilgungsrechner/
+(3)* https://www.finanztip.de/baufinanzierungsrechner/
+(4)* https://tilgungsrechner.fmh.de/rechner3/fmh2/tilgungsrechner/
+
+* kleine Abweichungen von einstelligen Eurobeträgen pro Jahr
 """
 
 __author__      = 'Alf Köhn-Seemann'
