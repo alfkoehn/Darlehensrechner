@@ -45,7 +45,11 @@ zahlung_0       = tilgung_euro + schulden * zinssatz/100.
 
 # aktuelles Jahr und Monat als Startpunkt ermitteln
 jahr    = time.localtime()[0]
-monat_0 = time.localtime()[1]
+monat_0 = time.localtime()[1] + 1
+
+print()
+print( "Monatliche Zahlung: {0:.2f} EUR (beginnt {1:02d}/{2:4d})".format(
+    zahlung_0/12., monat_0, jahr) )
 
 print()
 print( "-------------------------------------------------------------------------------" )
@@ -56,7 +60,7 @@ print( "-------+----------+-----------------------------------------------------
 # Achtung: die Raten werden monatlich aktualisiert
 zinsen_summe        = .0            # insgesamt gezahlte Zinsen
 zinsen_jahr_sum     = 0             # für laufendes Jahr aufsummierter Zinsanteil
-monat               = monat_0 + 1   # Zähler für den aktuellen Monat
+monat               = monat_0       # Zähler für den aktuellen Monat
 tilgung_noZins_sum  = 0             # für laufendes Jahr aufsummierter Tilgungsanteil
 zahlung_jahr_sum    = 0             # für laufendes Jahr aufsummierte Zahlungen
 while schulden > tilgung_euro:
